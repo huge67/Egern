@@ -72,7 +72,10 @@ policy_groups:
     name: AllServer
     type: select
     urls:
-    - https://your-subscription-url
+    - https://your-subscription-url-1
+    - https://your-subscription-url-2
+    - https://your-subscription-url-3
+    - https://your-subscription-url-4
     filter: '^((?!Remain|Expired|官网|如需|套餐|去除|剩余|距离|Reset|重置|流量).)+$'
     update_interval: 86400
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/rocket(1).png
