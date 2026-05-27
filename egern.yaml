@@ -69,15 +69,49 @@ dns:
   public_ip_lookup_url: https://ifconfig.me/ip
 policy_groups:
 - external:
-    name: AllServer
+    name: 机场1
     type: select
     urls:
     - https://your-subscription-url-1
+    filter: '^((?!Remain|Expired|官网|如需|套餐|去除|剩余|距离|Reset|重置|流量).)+$'
+    update_interval: 86400
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/rocket(1).png
+    hidden: false
+- external:
+    name: 机场2
+    type: select
+    urls:
     - https://your-subscription-url-2
+    filter: '^((?!Remain|Expired|官网|如需|套餐|去除|剩余|距离|Reset|重置|流量).)+$'
+    update_interval: 86400
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/rocket(1).png
+    hidden: false
+- external:
+    name: 机场3
+    type: select
+    urls:
     - https://your-subscription-url-3
+    filter: '^((?!Remain|Expired|官网|如需|套餐|去除|剩余|距离|Reset|重置|流量).)+$'
+    update_interval: 86400
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/rocket(1).png
+    hidden: false
+- external:
+    name: 机场4
+    type: select
+    urls:
     - https://your-subscription-url-4
     filter: '^((?!Remain|Expired|官网|如需|套餐|去除|剩余|距离|Reset|重置|流量).)+$'
     update_interval: 86400
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/rocket(1).png
+    hidden: false
+- select:
+    name: AllServer
+    policies:
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
+    flatten: true
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/rocket(1).png
     hidden: false
 - select:
@@ -177,6 +211,10 @@ policy_groups:
     - Japan
     - United States
     - United Kingdom
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/rocket(1).png
     hidden: false
@@ -185,6 +223,10 @@ policy_groups:
     policies:
     - Mainland
     - Automatic
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/lightning.png
     hidden: false
@@ -194,6 +236,10 @@ policy_groups:
     - Mainland
     - Hong Kong
     - United States
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/apple.png
     hidden: false
@@ -204,6 +250,10 @@ policy_groups:
     - United States
     - Japan
     - Singapore
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/chatgpt(1).png
     hidden: false
@@ -214,6 +264,10 @@ policy_groups:
     - Hong Kong
     - Singapore
     - United States
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/microsoft.png
     hidden: false
@@ -224,6 +278,10 @@ policy_groups:
     - Hong Kong
     - Singapore
     - United States
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/OneDrive.png
     hidden: false
@@ -236,6 +294,10 @@ policy_groups:
     - Hong Kong
     - Taiwan
     - Japan
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/telegram.png
     hidden: false
@@ -246,6 +308,10 @@ policy_groups:
     - Hong Kong
     - Singapore
     - United States
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/wechat.png
     hidden: false
@@ -258,6 +324,10 @@ policy_groups:
     - Singapore
     - Japan
     - United States
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/twitter.png
     hidden: false
@@ -267,6 +337,10 @@ policy_groups:
     - Mainland
     - Hong Kong
     - Taiwan
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/bilibili.png
     hidden: false
@@ -275,6 +349,10 @@ policy_groups:
     policies:
     - Hong Kong
     - Singapore
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/disney.png
     hidden: false
@@ -286,6 +364,10 @@ policy_groups:
     - Singapore
     - Japan
     - United States
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/netflix.png
     hidden: false
@@ -296,6 +378,10 @@ policy_groups:
     - Singapore
     - Japan
     - United States
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/tiktok.png
     hidden: false
@@ -308,6 +394,10 @@ policy_groups:
     - Singapore
     - Japan
     - United States
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/Youtube.png
     hidden: false
@@ -316,6 +406,10 @@ policy_groups:
     policies:
     - Mainland
     - Automatic
+    - 机场1
+    - 机场2
+    - 机场3
+    - 机场4
     - AllServer
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/speedtest.png
     hidden: false
